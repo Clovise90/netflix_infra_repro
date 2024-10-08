@@ -1,7 +1,7 @@
 # this file creates ec2 instance 
-#Git add will help git to start tracking the file
+#Git add will help git to start tracking the file/added 
 #git update will help git to update the file
-#git commit will help git to commit the file
+#git commit will help git to commit the file/take a snaphot and save
 #git push will help git to push the file
 #git pull will help git to pull the file
 #git clone will help git to clone the file
@@ -19,3 +19,15 @@
 #git stash drop will help git to drop the stashed files
 #git stash pop will help git to pop the stashed files
 #git stash branch will help git to create a branch from the stashed files
+#git log keeps track of the changes made to the file 
+#git config helps to configure the git
+#git remote helps to connect to the remote repository
+#git remote add helps to add the remote repository
+
+resource "aws_instance" "myec2" {
+    ami = "ami-0b5eea76982371e91"
+    instance_type = "t2.micro"
+    tags = {
+        Name = "myec2"
+    }
+}
